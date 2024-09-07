@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %} B Store {% endblock title %}
+
+{% block content %}
+
+<h1 > are you shore that you what to delete </h1>
+<form method ="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">Delete</button>
+    <a href="{% url 'book_list' %}" class="btn btn-success">Cancel</a>
+    
+</form> 
+
+{% endblock %}
